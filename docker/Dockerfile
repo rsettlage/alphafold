@@ -60,7 +60,7 @@ RUN conda update -qy conda \
 
 ## COPY . /app/alphafold
 RUN mkdir /app && cd /app
-RUN git clone git@github.com:rsettlage/alphafold.git
+RUN git clone https://github.com/rsettlage/alphafold.git
 RUN wget -q -P /app/alphafold/alphafold/common/ \
   https://git.scicore.unibas.ch/schwede/openstructure/-/raw/7102c63615b64735c4941278d92b554ec94415f8/modules/mol/alg/src/stereo_chemical_props.txt
 
