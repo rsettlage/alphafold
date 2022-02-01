@@ -61,7 +61,7 @@ RUN conda update -qy conda \
 ## COPY . /app/alphafold
 RUN mkdir /app && cd /app
 RUN git clone https://github.com/rsettlage/alphafold.git
-RUN wget -q -P /app/alphafold/alphafold/common/ \
+RUN mkdir /app/alphafold/alphafold/common && wget -q -P /app/alphafold/alphafold/common/ \
   https://git.scicore.unibas.ch/schwede/openstructure/-/raw/7102c63615b64735c4941278d92b554ec94415f8/modules/mol/alg/src/stereo_chemical_props.txt
 
 # Install pip packages.
